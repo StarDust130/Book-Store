@@ -3,11 +3,18 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import { PORT } from "./config.js";
 import  bookRoute  from "./routes/books.routes.js";
+import cors from "cors";
 
 dotenv.config({ path: "../.env" });
 
+
+
 //! Create Express app
 const app = express();
+
+//! Cors
+app.use(cors());
+
 
 //! Middleware to parse JSON bodies
 app.use(express.json());
