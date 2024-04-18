@@ -16,6 +16,7 @@ import {
 import { FcViewDetails } from "react-icons/fc";
 import Delete from "@/components/Delete";
 import Edit from "@/components/Edit";
+import Details from "@/components/Details";
 
 interface Book {
   _id: string;
@@ -100,7 +101,14 @@ export default function Home() {
               <TableCell className="text-center">
                 <div className="flex justify-center items-center gap-5 cursor-pointer">
                   <abbr title="Details">
-                    <FcViewDetails size={20} />
+                    <Details
+                      title={book.title}
+                      author={book.author}
+                      description={book.description}
+                      publishYear={book.publishYear}
+                      pages={book.pages}
+                      _id={book._id}
+                      />
                   </abbr>{" "}
                   <abbr title="Edit">
                     {" "}
