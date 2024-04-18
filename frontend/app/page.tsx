@@ -13,10 +13,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { FcViewDetails } from "react-icons/fc";
 import Delete from "@/components/Delete";
 import Edit from "@/components/Edit";
 import Details from "@/components/Details";
+import Add from "@/components/Add";
 
 interface Book {
   _id: string;
@@ -74,9 +74,17 @@ export default function Home() {
 
   return (
     <main className="flex justify-center items-center w-full h-full flex-col">
-      <h1 className="font-normal text-2xl mt-10 text-gray-500 ">
-        Book List 📚
-      </h1>
+      <div className="flex justify-center gap-10 w-full  items-center m-10">
+        <div className="flex justify-center items-center">
+          <h1 className="font-normal text-2xl  text-gray-500 ">Book List 📚</h1>
+        </div>
+        <div className="flex justify-center items-center  ">
+          <abbr title="Add">
+            <Add setBooks={setBooks} books={books} />
+          </abbr>
+        </div>
+      </div>
+
       <Table>
         <TableCaption className="mt-10">A list of Great Books</TableCaption>
         <TableHeader>
@@ -108,7 +116,7 @@ export default function Home() {
                       publishYear={book.publishYear}
                       pages={book.pages}
                       _id={book._id}
-                      />
+                    />
                   </abbr>{" "}
                   <abbr title="Edit">
                     {" "}
