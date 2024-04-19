@@ -4,6 +4,7 @@ Welcome to our Awesome Book Store project! This is a MERN (MongoDB, Express.js, 
 
 ## Features
 
+
 - 📘 **Add Books**: Easily add new books with details such as title, author, genre, and more. 📝
 - 📕 **Edit Books**: Update existing book details like title, author, or genre. 🖊️
 - 📗 **Delete Books**: Remove books you no longer want in your collection. ❌
